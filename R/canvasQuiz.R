@@ -1,10 +1,16 @@
 read =
+    #
+    # Use htmlParse() rather than xmlParse() as the HTML content within a question may not be well formed.
+    # If you do use xmlParse(), then the document will have a default namespace and we need to specify that
+    # in the XPath queries.
+    #
 function(file, meta = TRUE, doc = htmlParse(file))
 {
     qs = getQuestions(doc)
-    ans = lapply(qs, processQuestion)
+    metad = getMetadata(qs = qs)
+    ans = mapply(processQuestion, qs, metad, SIMPLIFY = FALSE)
     if(meta)
-        list(answers = ans, meta = getMetadata(qs = qs))
+        list(answers = ans, meta = metad)
     else
         ans
 }
@@ -24,9 +30,10 @@ function(doc)
 }
 
 processQuestion =
-function(q)
+function(q, meta = getQMetadata(q), prompt = TRUE)
 {
-    ansId = xpathSApply(q, ".//respcondition//varequal[@respident = 'response1']", xmlValue)
+browser()    
+    ansId = xpathSApply(q, ".//respcondition//varequal[starts-with(@respident, 'response')]", xmlValue)
     if(length(ansId)) {
         xquery = sprintf(".//response_label[ %s ]", paste(sprintf("@ident = '%s'", ansId), collapse = " or "))
         ans = xpathSApply(q, xquery, xmlValue)
@@ -36,16 +43,22 @@ function(q)
     if(length(score) == 0)
         score = NA
     
-    data.frame(answer = ans, score = score, stringsAsFactors = FALSE)
+    ans = data.frame(answer = ans, score = score, stringsAsFactors = FALSE)
+
+    if(prompt) 
+        ans$prompt = xmlValue(getNodeSet(q, ".//presentation//mattext")[[1]])
+
+    
+    ans
 }
 
 getQMetadata =
 function(q)
 {
-   xpathApply(q, ".//qtimetadatafield", getQMetadata)
+   xpathApply(q, ".//qtimetadatafield", getQMetadataValue)
 }
 
-getQMetadata =
+getQMetadataValue =
 function(x)    
 {
    structure( xmlValue(x[["fieldentry"]]), names = xmlValue(x[["fieldlabel"]]))

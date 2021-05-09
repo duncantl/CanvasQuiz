@@ -1,4 +1,4 @@
-read =
+readQuiz =
     #
     # Use htmlParse() rather than xmlParse() as the HTML content within a question may not be well formed.
     # If you do use xmlParse(), then the document will have a default namespace and we need to specify that
@@ -18,7 +18,7 @@ function(file, doc = htmlParse(file))
 getMetadata =
 function(doc, qs = getQuestions(doc))    
 {
-    do.call(rbind, lapply(qs, getQMetadata))
+    lapply(qs, getQMetadata)
 }
 
 getQuestions =
@@ -39,6 +39,7 @@ function(q)
     xmlGetAttr(q, "label", xmlGetAttr(q, "title", xmlGetAttr(q, "ident")))
 }
 
+if(FALSE) {
 processQuestion =
     #
     # Old version, overwritten below.
@@ -60,10 +61,10 @@ function(q, meta = getQMetadata(q), prompt = TRUE)
     if(prompt) 
         ans$prompt = xmlValue(getNodeSet(q, ".//presentation//mattext")[[1]])
 
-    
     ans
 }
-
+}
+ 
 
 processQuestion =
 function(q, meta = getQMetadata(q), prompt = TRUE)
@@ -116,7 +117,7 @@ function(q, meta)
 getQMetadata =
 function(q)
 {
-   xpathApply(q, ".//qtimetadatafield", getQMetadataValue)
+   xpathSApply(q, ".//qtimetadatafield", getQMetadataValue)
 }
 
 getQMetadataValue =

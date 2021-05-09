@@ -9,7 +9,9 @@ represent the different types of questions. The XMLSchema package might help wit
 
 The schema is at [http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd](http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd)
 The R object representing the types and elements in the schema is availabe in
-inst/schema/QTISchema.rds. It is useful to see what child nodes and attributes can be in each XML element.
+inst/schema/QTISchema.rds. It is useful to see what child nodes and attributes can be in each XML
+element.
+You'll need to install the [XMLSchema package](https://github.com/omegahat/XMLSchema) (from github).
 
 The format may be documented [here](http://www.imsglobal.org/question/index.html) but this seems
 slightly different.
@@ -23,3 +25,4 @@ f = system.file("exampleDocs", "quiz3.xml", package = "QTIQuiz")
 qz3 = readQuiz(f)
 names(qz3)
 ```
+See the help page for readQuiz for more manipulation of the results.

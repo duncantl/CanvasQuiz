@@ -32,7 +32,7 @@ The schema for the XML documents is at \url{http://www.imsglobal.org/xsd/ims_qti
 Duncan Temple Lang
 }
 \examples{
-f = system.file("exampleDocs", "quiz3.xml")
+f = system.file("exampleDocs", "quiz3.xml", package = "QTIQuiz")
 qz3 = readQuiz(f)
 names(qz3)
 
@@ -41,6 +41,8 @@ sapply(qz3, names)
 sapply(qz3, function(x) x$meta['question_type'])
 
 lapply(qz3, `[[`, "answer")
+
+qz3$Range$answer
 }
 
 \keyword{IO}

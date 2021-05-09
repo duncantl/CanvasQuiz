@@ -28,7 +28,7 @@ getQuestions =
     #
 function(doc)
 {
-    q = getNodeSet(doc, "//item[@title = 'Question' and .//resprocessing]")
+    q = getNodeSet(doc, "//item[.//resprocessing]")
     names(q) = sapply(q, getQuestionName)
     q
 }

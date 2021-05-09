@@ -45,7 +45,7 @@
           </material>
         </presentation>
       </item>
-      <item ident="g0654270752f768dab95b2dca991d79f2" title="Question">
+      <item ident="g0654270752f768dab95b2dca991d79f2" title="True or False">
         <itemmetadata>
           <qtimetadata>
             <qtimetadatafield>
@@ -205,7 +205,7 @@
           </respcondition>
         </resprocessing>
       </item>
-      <item ident="g201b4b9501fe25a7077ee3e23617b54e" title="Question">
+      <item ident="g201b4b9501fe25a7077ee3e23617b54e" title="√ Question">
         <itemmetadata>
           <qtimetadata>
             <qtimetadatafield>
@@ -218,7 +218,7 @@
             </qtimetadatafield>
             <qtimetadatafield>
               <fieldlabel>original_answer_ids</fieldlabel>
-              <fieldentry>8275</fieldentry>
+              <fieldentry>9709</fieldentry>
             </qtimetadatafield>
             <qtimetadatafield>
               <fieldlabel>assessment_question_identifierref</fieldlabel>
@@ -254,7 +254,7 @@
           </respcondition>
         </resprocessing>
       </item>
-      <item ident="g0d1afb5a527715e44426d41b422e496c" title="Question">
+      <item ident="g0d1afb5a527715e44426d41b422e496c" title="Fill in one blank">
         <itemmetadata>
           <qtimetadata>
             <qtimetadatafield>
@@ -267,7 +267,7 @@
             </qtimetadatafield>
             <qtimetadatafield>
               <fieldlabel>original_answer_ids</fieldlabel>
-              <fieldentry>2170,6180,1314</fieldentry>
+              <fieldentry>6180</fieldentry>
             </qtimetadatafield>
             <qtimetadatafield>
               <fieldlabel>assessment_question_identifierref</fieldlabel>
@@ -291,15 +291,13 @@
           </outcomes>
           <respcondition continue="No">
             <conditionvar>
-              <varequal respident="response1">strings</varequal>
               <varequal respident="response1">patterns</varequal>
-              <varequal respident="response1">matches</varequal>
             </conditionvar>
             <setvar action="Set" varname="SCORE">100</setvar>
           </respcondition>
         </resprocessing>
       </item>
-      <item ident="g7f116bbb90128dceea4975708c8eb9f9" title="Question">
+      <item ident="g7f116bbb90128dceea4975708c8eb9f9" title="Fill in 2 blanks">
         <itemmetadata>
           <qtimetadata>
             <qtimetadatafield>
@@ -397,7 +395,7 @@
           </respcondition>
         </resprocessing>
       </item>
-      <item ident="gd53dcb97b18938ec48c873821bc40cc1" title="Question">
+      <item ident="gd53dcb97b18938ec48c873821bc40cc1" title="2 pulldown menus">
         <itemmetadata>
           <qtimetadata>
             <qtimetadatafield>
@@ -490,7 +488,7 @@
           </respcondition>
         </resprocessing>
       </item>
-      <item ident="g281786b17a6ecaaf1ea375c39d1f3557" title="Question">
+      <item ident="g281786b17a6ecaaf1ea375c39d1f3557" title="Formula Question">
         <itemmetadata>
           <qtimetadata>
             <qtimetadatafield>
@@ -503,7 +501,7 @@
             </qtimetadatafield>
             <qtimetadatafield>
               <fieldlabel>original_answer_ids</fieldlabel>
-              <fieldentry>3548,1155,7229,3231,545,1736,352,8370,7326,6866</fieldentry>
+              <fieldentry>2648,226,9105,4083,4131,2544,5628,1870,5369,2819</fieldentry>
             </qtimetadatafield>
             <qtimetadatafield>
               <fieldlabel>assessment_question_identifierref</fieldlabel>
@@ -553,49 +551,253 @@
               </var>
             </vars>
             <var_sets>
-              <var_set ident="3548">
+              <var_set ident="2648">
                 <var name="x">10</var>
                 <answer>15.0</answer>
               </var_set>
-              <var_set ident="1155">
+              <var_set ident="226">
                 <var name="x">10</var>
                 <answer>15.0</answer>
               </var_set>
-              <var_set ident="7229">
+              <var_set ident="9105">
                 <var name="x">3</var>
                 <answer>8.0</answer>
               </var_set>
-              <var_set ident="3231">
+              <var_set ident="4083">
                 <var name="x">8</var>
                 <answer>13.0</answer>
               </var_set>
-              <var_set ident="545">
+              <var_set ident="4131">
                 <var name="x">4</var>
                 <answer>9.0</answer>
               </var_set>
-              <var_set ident="1736">
+              <var_set ident="2544">
                 <var name="x">4</var>
                 <answer>9.0</answer>
               </var_set>
-              <var_set ident="352">
+              <var_set ident="5628">
                 <var name="x">3</var>
                 <answer>8.0</answer>
               </var_set>
-              <var_set ident="8370">
+              <var_set ident="1870">
                 <var name="x">5</var>
                 <answer>10.0</answer>
               </var_set>
-              <var_set ident="7326">
+              <var_set ident="5369">
                 <var name="x">7</var>
                 <answer>12.0</answer>
               </var_set>
-              <var_set ident="6866">
+              <var_set ident="2819">
                 <var name="x">3</var>
                 <answer>8.0</answer>
               </var_set>
             </var_sets>
           </calculated>
         </itemproc_extension>
+      </item>
+      <item ident="g16fe2907fb42eb3edc7367b46f035c0a" title="Range">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>question_type</fieldlabel>
+              <fieldentry>numerical_question</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>points_possible</fieldlabel>
+              <fieldentry>1.0</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>original_answer_ids</fieldlabel>
+              <fieldentry>8796,1514,8624,2545</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>assessment_question_identifierref</fieldlabel>
+              <fieldentry>g1982a93ad31d34ff2a16a91fe97ffb82</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;&lt;p&gt;What's the population of Ireland&lt;/p&gt;&lt;/div&gt;</mattext>
+          </material>
+          <response_str ident="response1" rcardinality="Single">
+            <render_fib fibtype="Decimal">
+              <response_label ident="answer1"/>
+            </render_fib>
+          </response_str>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="No">
+            <conditionvar>
+              <or>
+                <varequal respident="response1">5000000.0</varequal>
+                <and>
+                  <vargte respident="response1">4500000.0</vargte>
+                  <varlte respident="response1">5500000.0</varlte>
+                </and>
+              </or>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <or>
+                <varequal respident="response1">0.0</varequal>
+                <and>
+                  <vargte respident="response1">0.0</vargte>
+                  <varlte respident="response1">0.0</varlte>
+                </and>
+              </or>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <or>
+                <varequal respident="response1">0.0</varequal>
+                <and>
+                  <vargte respident="response1">0.0</vargte>
+                  <varlte respident="response1">0.0</varlte>
+                </and>
+              </or>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <or>
+                <varequal respident="response1">0.0</varequal>
+                <and>
+                  <vargte respident="response1">0.0</vargte>
+                  <varlte respident="response1">0.0</varlte>
+                </and>
+              </or>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+          <respcondition continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_incorrect_fb"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="general_incorrect_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html">&lt;p&gt;Use Wikipedia to look up the population.&lt;/p&gt;</mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="g19730f70a3e9818be2c0a915a120b3d7" title="Upload a file">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>question_type</fieldlabel>
+              <fieldentry>file_upload_question</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>points_possible</fieldlabel>
+              <fieldentry>1.0</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>original_answer_ids</fieldlabel>
+              <fieldentry></fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>assessment_question_identifierref</fieldlabel>
+              <fieldentry>g7cbb4cce50582562c27784bc3fca44a0</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;&lt;p&gt;Upload your R code.&lt;/p&gt;&lt;/div&gt;</mattext>
+          </material>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+        </resprocessing>
+      </item>
+      <item ident="gf75be47014408e70d66c103616dd75bd" title="Multiple checboxes">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>question_type</fieldlabel>
+              <fieldentry>multiple_answers_question</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>points_possible</fieldlabel>
+              <fieldentry>1.0</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>original_answer_ids</fieldlabel>
+              <fieldentry>4659,9141,882,3380</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>assessment_question_identifierref</fieldlabel>
+              <fieldentry>gce238131c8dae3a63e60d79b7ed7a772</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html">&lt;div&gt;&lt;p&gt;Select the one that makes most sense.&lt;/p&gt;
+&lt;p&gt;A, B, C, A &amp;amp; B, A &amp;amp;C&lt;/p&gt;&lt;/div&gt;</mattext>
+          </material>
+          <response_lid ident="response1" rcardinality="Multiple">
+            <render_choice>
+              <response_label ident="4659">
+                <material>
+                  <mattext texttype="text/plain">A</mattext>
+                </material>
+              </response_label>
+              <response_label ident="9141">
+                <material>
+                  <mattext texttype="text/plain">B</mattext>
+                </material>
+              </response_label>
+              <response_label ident="882">
+                <material>
+                  <mattext texttype="text/plain">A&amp;B</mattext>
+                </material>
+              </response_label>
+              <response_label ident="3380">
+                <material>
+                  <mattext texttype="text/plain"></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar maxvalue="100" minvalue="0" varname="SCORE" vartype="Decimal"/>
+          </outcomes>
+          <respcondition continue="No">
+            <conditionvar>
+              <and>
+                <varequal respident="response1">4659</varequal>
+                <not>
+                  <varequal respident="response1">9141</varequal>
+                </not>
+                <not>
+                  <varequal respident="response1">882</varequal>
+                </not>
+                <not>
+                  <varequal respident="response1">3380</varequal>
+                </not>
+              </and>
+            </conditionvar>
+            <setvar action="Set" varname="SCORE">100</setvar>
+          </respcondition>
+        </resprocessing>
       </item>
     </section>
   </assessment>

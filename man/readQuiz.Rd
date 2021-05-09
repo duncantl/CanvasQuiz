@@ -11,7 +11,6 @@
 \usage{
 readQuiz(file, doc = htmlParse(file))
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{file}{the name of the file or the XML content itsel}
   \item{doc}{the parsed XML document. We use
@@ -20,23 +19,18 @@ readQuiz(file, doc = htmlParse(file))
     as we encountered one sample document that had embedded HTML
     content that was not well-formed.
     Also, this removes the default namespaces and makes the XPath
-    queries simpler as we don't have to specify a namespace.
-}
-\details{
+    queries simpler as we don't have to specify a namespace.}
 }
 \value{
 A list with an element for each question for which an answer is
 expected, i.e., we omit text-only questions.
 }
 \references{
-  The schema for the XML documents is at \url{http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd}
+The schema for the XML documents is at \url{http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd}
 }
 \author{
 Duncan Temple Lang
 }
-
-
-
 \examples{
 f = system.file("exampleDocs", "quiz3.xml")
 qz3 = readQuiz(f)
